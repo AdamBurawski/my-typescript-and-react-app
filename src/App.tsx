@@ -1,9 +1,11 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import { CryptoPrice } from "./components/cryptoPrice/CryptoPrice";
+import { CryptoPrice } from "./components/CryptoPrice/CryptoPrice";
 
 import { Dialog } from "./components/common/Dialog/Dialog";
+import { GiftsList } from "./components/Gifts/GiftsList";
+import { GiftsView } from "./views/GiftsView";
 
 export const App = () => {
   return (
@@ -31,6 +33,9 @@ export const App = () => {
     //     </Dialog>
     //   </header>
     // </div>
-    <CryptoPrice />
+    <>
+      {/* <CryptoPrice /> */}
+      <GiftsView />
+    </>
   );
 };
