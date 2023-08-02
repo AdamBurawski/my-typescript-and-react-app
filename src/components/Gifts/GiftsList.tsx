@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 // import { GiftEntity } from "../../types/gifts";
 import { GiftsTable } from "./GiftsTable";
 import { GiftEntity } from "types";
+import { Spinner } from "../common/Spinner/Spinner";
 
 export const GiftsList = () => {
   const [giftsList, setGiftsList] = useState<GiftEntity[] | null>(null);
@@ -19,7 +20,10 @@ export const GiftsList = () => {
 
   if (giftsList === null) {
     return (
-      <div style={{ margin: "30px", textAlign: "center" }}> Loading...</div>
+      <div style={{ margin: "30px", textAlign: "center" }}>
+        {" "}
+        <Spinner />
+      </div>
     );
   }
 

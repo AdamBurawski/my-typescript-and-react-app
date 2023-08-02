@@ -7,6 +7,10 @@ import { Dialog } from "./components/common/Dialog/Dialog";
 import { GiftsList } from "./components/Gifts/GiftsList";
 import { GiftsView } from "./views/GiftsView";
 
+import { Route, Routes } from "react-router-dom";
+import { TestView } from "./views/TestView";
+import { Link } from "react-router-dom";
+import { Header } from "./components/Header/Header";
 export const App = () => {
   return (
     // <div className="App">
@@ -34,8 +38,11 @@ export const App = () => {
     //   </header>
     // </div>
     <>
-      {/* <CryptoPrice /> */}
-      <GiftsView />
+      <Header />
+      <Routes>
+        <Route path="/gift" element={<GiftsView />} />
+        <Route path="/test" element={<TestView />} />
+      </Routes>
     </>
   );
 };
