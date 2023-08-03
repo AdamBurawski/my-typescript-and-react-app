@@ -6,11 +6,14 @@ import { CryptoPrice } from "./components/CryptoPrice/CryptoPrice";
 import { Dialog } from "./components/common/Dialog/Dialog";
 import { GiftsList } from "./components/Gifts/GiftsList";
 import { GiftsView } from "./views/GiftsView";
+import { SingleGiftView } from "./views/SingleGiftView";
 
 import { Route, Routes } from "react-router-dom";
-import { TestView } from "./views/TestView";
+import { ChildView } from "./views/ChildView";
 import { Link } from "react-router-dom";
 import { Header } from "./components/Header/Header";
+import { NotFoundView } from "./views/NotFoundView";
+
 export const App = () => {
   return (
     // <div className="App">
@@ -41,7 +44,9 @@ export const App = () => {
       <Header />
       <Routes>
         <Route path="/gift" element={<GiftsView />} />
-        <Route path="/test" element={<TestView />} />
+        <Route path="/gift/:idOfGift" element={<SingleGiftView />} />
+        <Route path="/child" element={<ChildView />} />
+        <Route path="*" element={<NotFoundView />} />
       </Routes>
     </>
   );
