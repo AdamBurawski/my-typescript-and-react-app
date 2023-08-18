@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BinanceOneCryptoPairData } from "../../types/crypto-data";
+import { BinanceOneCryptoPairData } from "../../_types/crypto-data";
 import { CryptoPriceOfOnePair } from "./CryptoPriceOfOnePair";
 
 export const CryptoPrice = () => {

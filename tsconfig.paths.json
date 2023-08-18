@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "types": ["../ts-list-of-presents-backend/types"]
+      "types": ["../my-typescript-and-react-app-backend/types"]
     }
   }
 }

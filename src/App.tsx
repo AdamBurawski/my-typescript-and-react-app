@@ -14,6 +14,8 @@ import { Link } from "react-router-dom";
 import { Header } from "./components/Header/Header";
 import { NotFoundView } from "./views/NotFoundView";
 
+// import { Calculator } from "./components/Calculator/redux-toolkit/Calculator";
+
 export const App = () => {
   return (
     // <div className="App">
@@ -43,11 +45,13 @@ export const App = () => {
     <>
       <Header />
       <Routes>
+        <Route path="/" element={<ChildView />} />
         <Route path="/gift" element={<GiftsView />} />
         <Route path="/gift/:idOfGift" element={<SingleGiftView />} />
         <Route path="/child" element={<ChildView />} />
         <Route path="*" element={<NotFoundView />} />
       </Routes>
+      {/* <Calculator /> */}
     </>
   );
 };
